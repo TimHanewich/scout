@@ -2,8 +2,12 @@
 *Scout* is an open-source custom quadcopter flight controller firmware that I developed from absolute scratch. The *Scout Flight Controller* is written in MicroPython and runs on a $4 Raspberry Pi Pico.
 -----
 
+## Scout Demo Videos
 Click on the image below to watch a brief video about *Scout's* development:
 [![IMAGE ALT TEXT HERE](https://i.imgur.com/iNZ74vi.png)](https://www.youtube.com/watch?v=mbrcnaByMyo)
+
+- Scout's First Flight: [https://youtu.be/Wh5G9zdJbzk](https://youtu.be/Wh5G9zdJbzk)
+- Scout Demo Flight 1: [https://youtu.be/LNRYPo5-4VI](https://youtu.be/LNRYPo5-4VI)
 
 ## Development Tutorial
 I'm publicly sharing all that I learned during the three months I spent dreaming about and developing *Scout*. I wrote a 12-chapter series on how I developed *Scout* and the hardware requirements. You can find the articles on Medium below:

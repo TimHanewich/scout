@@ -25,7 +25,7 @@ I'm publicly sharing all that I learned during the three months I spent dreaming
 - "Bonus code" snippets (code that isn't immediately required by the flight controller software but can be of help for specific tasks anyway) can be found [in the `bonus_code` folder](./bonus_code/).
 
 ## Using this Code
-[I am releasing *Scout's* the full source code under the MIT License](license.md). I hope this code can be of use for learning purposes, testing, personal projects, or any other benevolent reason. I do not condone the use of this software for menovlent reasons and do not take responsibility for any direct or indirect consequences. Please explore the skies responsibly.
+[I am releasing *Scout's* full source code under the MIT License](license.md). I hope this code can be of use for learning purposes, testing, personal projects, or any other benevolent reason. I do not condone the use of this software for malevolent reasons and do not take responsibility for any direct or indirect consequences. Please explore the skies responsibly.
 
 ## Liability Disclaimer
 Please be aware that I, Tim Hanewich, the creator of this drone quadcopter code, do not assume any responsibility or liability for any consequences, including but not limited to injuries, damages, breaches of law, or any adverse events that may occur while deploying, testing, or using this code in any other way.

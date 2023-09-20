@@ -5,7 +5,8 @@
 Click on the image below to watch a brief video about *Scout's* development:
 [![IMAGE ALT TEXT HERE](https://i.imgur.com/iNZ74vi.png)](https://www.youtube.com/watch?v=mbrcnaByMyo)
 
-I wrote a 12-chapter series on how I developed *Scout* and the hardware requirements. You can find the articles on Medium below:
+## Development Tutorial
+I'm publicly sharing all that I learned during the three months I spent dreaming about and developing *Scout*. I wrote a 12-chapter series on how I developed *Scout* and the hardware requirements. You can find the articles on Medium below:
 1. [Introducing the Scout Flight Controller](https://medium.com/@timhanewich/my-greatest-engineering-accomplishment-the-scout-flight-controller-d8937fb45b24)
 2. [Quadcopter Flight Dynamics](https://timhanewich.medium.com/how-i-developed-the-scout-flight-controller-part-1-quadcopter-flight-dynamics-400af73d21db)
 3. [Capturing Telemetry with a Gyroscope](https://timhanewich.medium.com/how-i-developed-the-scout-flight-controller-part-2-gyroscope-telemetry-91f40b76d0f9)

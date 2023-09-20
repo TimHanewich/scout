@@ -1,5 +1,9 @@
 ![logo](https://i.imgur.com/X2tfDfO.jpg)
-*Scout* is a custom quadcopter flight controller firmware that I developed from scratch. The *Scout Flight Controller* is written in MicroPython and runs on a $4 Raspberry Pi Pico.
+*Scout* is an open-source custom quadcopter flight controller firmware that I developed from absolute scratch. The *Scout Flight Controller* is written in MicroPython and runs on a $4 Raspberry Pi Pico.
+-----
+
+Click on the image below to watch a brief video about *Scout's* development:
+[![IMAGE ALT TEXT HERE](https://i.imgur.com/iNZ74vi.png)](https://www.youtube.com/watch?v=mbrcnaByMyo)
 
 I wrote a 12-chapter series on how I developed *Scout* and the hardware requirements. You can find the articles on Medium below:
 1. [Introducing the Scout Flight Controller](https://medium.com/@timhanewich/my-greatest-engineering-accomplishment-the-scout-flight-controller-d8937fb45b24)

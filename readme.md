@@ -21,8 +21,8 @@ I'm publicly sharing all that I learned during the three months I spent dreaming
 8. [Full Flight Controller Code & Explanation](https://timhanewich.medium.com/how-i-developed-the-scout-flight-controller-part-7-full-flight-controller-code-4269c83b3b48)
 9. [Taking Flight](https://timhanewich.medium.com/how-i-developed-the-scout-flight-controller-part-8-taking-flight-c6e41d587d8a)
 10. [A Lesson in Persistence](https://timhanewich.medium.com/how-i-developed-the-scout-flight-controller-part-9-a-lesson-in-persistence-b969ea330436)
-11. Potential Future Improvements — releasing September 25, 2023
-12. Bonus Code — releasing October 2, 2023
+11. [Potential Future Improvements](https://medium.com/@timhanewich/how-i-developed-the-scout-flight-controller-part-10-future-improvements-ae1957f81f76)
+12. [Bonus Code](https://timhanewich.medium.com/how-i-developed-the-scout-flight-controller-part-11-bonus-code-b6bd4f18de64)
 
 ## Repository Contents
 - The complete source code can be found in [the `src` folder](./src/).

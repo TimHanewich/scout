@@ -169,7 +169,13 @@ def run() -> None:
     # INFINITE LOOP
     led.on() # turn on the onboard LED to signal that the flight controller is now active
     print("-- BEGINNING FLIGHT CONTROL LOOP NOW --")
+    
     try:
+        # Make local copy of global scope functions
+        loc_trans_pair = translate_pair
+        loc_norm = normalize
+        loc_duty_calc = calculate_duty_cycle
+        
         while True:
             
             # mark start time
@@ -178,25 +184,25 @@ def run() -> None:
             # Capture raw IMU data
             # we divide by 65.5 here because that is the modifier to use at a gyro range scale of 1, which we are using.
             gyro_data = i2c.readfrom_mem(mpu6050_address, 0x43, 6) # read 6 bytes (2 for each axis)
-            gyro_x = ((translate_pair(gyro_data[0], gyro_data[1]) / 65.5) - gyro_bias_x) * -1 # Roll rate. we multiply by -1 here because of the way I have it mounted. it should be rotated 180 degrees I believe, but it's okay, I can flip it here. 
-            gyro_y = (translate_pair(gyro_data[2], gyro_data[3]) / 65.5) - gyro_bias_y # Pitch rate.
-            gyro_z = ((translate_pair(gyro_data[4], gyro_data[5]) / 65.5) * -1) - gyro_bias_z # Yaw rate. multiply by -1 because of the way I have it mounted - it may be upside down. I want a "yaw to the right" to be positive and a "yaw to the left" to be negative.
+            gyro_x = ((loc_trans_pair(gyro_data[0], gyro_data[1]) / 65.5) - gyro_bias_x) * -1 # Roll rate. we multiply by -1 here because of the way I have it mounted. it should be rotated 180 degrees I believe, but it's okay, I can flip it here. 
+            gyro_y = (loc_trans_pair(gyro_data[2], gyro_data[3]) / 65.5) - gyro_bias_y # Pitch rate.
+            gyro_z = ((loc_trans_pair(gyro_data[4], gyro_data[5]) / 65.5) * -1) - gyro_bias_z # Yaw rate. multiply by -1 because of the way I have it mounted - it may be upside down. I want a "yaw to the right" to be positive and a "yaw to the left" to be negative.
 
             # Read control commands from RC
             rc_data = rc.read()
 
             # normalize all RC input values
-            input_throttle:float = normalize(rc_data[3], 1000.0, 2000.0, 0.0, 1.0) # between 0.0 and 1.0
-            input_pitch:float = (normalize(rc_data[2], 1000.0, 2000.0, -1.0, 1.0)) * -1 # between -1.0 and 1.0. We multiply by -1 because... If the pitch is "full forward" (i.e. 75), that means we want a NEGATIVE pitch (when a plane pitches it's nose down, that is negative, not positive. And when a place pitches it's nose up, pulling back on the stick, it's positive, not negative.) Thus, we need to flip it.
-            input_roll:float = normalize(rc_data[1], 1000.0, 2000.0, -1.0, 1.0) # between -1.0 and 1.0
-            input_yaw:float = normalize(rc_data[4], 1000.0, 2000.0, -1.0, 1.0) # between -1.0 and 1.0
+            input_throttle:float = loc_norm(rc_data[3], 1000.0, 2000.0, 0.0, 1.0) # between 0.0 and 1.0
+            input_pitch:float = (loc_norm(rc_data[2], 1000.0, 2000.0, -1.0, 1.0)) * -1 # between -1.0 and 1.0. We multiply by -1 because... If the pitch is "full forward" (i.e. 75), that means we want a NEGATIVE pitch (when a plane pitches it's nose down, that is negative, not positive. And when a place pitches it's nose up, pulling back on the stick, it's positive, not negative.) Thus, we need to flip it.
+            input_roll:float = loc_norm(rc_data[1], 1000.0, 2000.0, -1.0, 1.0) # between -1.0 and 1.0
+            input_yaw:float = loc_norm(rc_data[4], 1000.0, 2000.0, -1.0, 1.0) # between -1.0 and 1.0
 
             # ADJUST MOTOR OUTPUTS!
             # based on channel 5. Channel 5 I have assigned to the switch that determines flight mode (standby/flight)
             if rc_data[5] == 1000: # standby mode - switch in "up" or OFF position
             
                 # turn motors off completely
-                duty_0_percent:int = calculate_duty_cycle(0.0)
+                duty_0_percent:int = loc_duty_calc(0.0)
                 M1.duty_ns(duty_0_percent)
                 M2.duty_ns(duty_0_percent)
                 M3.duty_ns(duty_0_percent)
@@ -258,10 +264,10 @@ def run() -> None:
                 t4:float = adj_throttle - pid_pitch - pid_roll - pid_yaw
 
                 # Adjust throttle according to input
-                M1.duty_ns(calculate_duty_cycle(t1))
-                M2.duty_ns(calculate_duty_cycle(t2))
-                M3.duty_ns(calculate_duty_cycle(t3))
-                M4.duty_ns(calculate_duty_cycle(t4))
+                M1.duty_ns(loc_duty_calc(t1))
+                M2.duty_ns(loc_duty_calc(t2))
+                M3.duty_ns(loc_duty_calc(t3))
+                M4.duty_ns(loc_duty_calc(t4))
 
                 # Save state values for next loop
                 roll_last_error = error_rate_roll
@@ -289,7 +295,7 @@ def run() -> None:
     except Exception as e: # something went wrong. Flash the LED so the pilot sees it
 
         # before we do anything, turn the motors OFF
-        duty_0_percent:int = calculate_duty_cycle(0.0)
+        duty_0_percent:int = loc_duty_calc(0.0)
         M1.duty_ns(duty_0_percent)
         M2.duty_ns(duty_0_percent)
         M3.duty_ns(duty_0_percent)
@@ -302,19 +308,6 @@ def run() -> None:
         M4.deinit()
         
         FATAL_ERROR(str(e))
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # UTILITY FUNCTIONS BELOW (Anything that is used by the flight controller loop should go here, not in a separate module or class (to save on processing time)

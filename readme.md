@@ -28,11 +28,6 @@ I'm publicly sharing all that I learned during the three months I spent dreaming
 - The complete source code for the *Scout Flight Controller* can be found in [the `src` folder](./src/).
 - "Bonus code" snippets (code that isn't immediately required by the flight controller software but can be of help for specific tasks anyway) can be found [in the `bonus_code` folder](./bonus_code/).
 
-## Disclaimer of Liability
-[I am releasing *Scout's* full source code under the MIT License](license.md). I hope this code can be of use for learning purposes, testing, personal projects, or any other benevolent reason. I do not condone the use of this software for malevolent reasons and do not take responsibility for any direct or indirect consequences. Please explore the skies responsibly.
-
-The code and designs provided are intended for educational and informational purposes. While I have made efforts to ensure their accuracy and safety, I cannot guarantee their suitability for all applications or environments. By utilizing this code or design to build your own quadcopter, you acknowledge and accept that you do so at your own risk. I explicitly disclaim any responsibility for any injuries, damages, or bodily harm that may occur as a result of using or replicating these materials. It is highly recommended to exercise caution, follow safety guidelines, and seek professional advice or assistance when constructing or operating any aerial device.
-
 ## How to Use this Code in Your Own Quadcopter
 If assembled and wired *exactly* as depicted in [my article describing Scout's hardware and electronics](https://timhanewich.medium.com/how-i-developed-the-scout-flight-controller-part-6-hardware-9f7e77acf874), only minor modifications need to be made to the Scout source code before using it in your own quadcopter.
 
@@ -62,10 +57,13 @@ But, if you do use the **exact** hardware I am using (same frame, motors, ESC's,
 8. Use the left stick to control throttle and yaw and the right stick to control pitch and roll, as [depicted here in this image](https://miro.medium.com/v2/resize:fit:700/0*-TObP3eRAyH7Rs3Y.png).
 9. When finished flying (safely landed), flip the top-left-most switch to the *off* position (`0`) to switch back to standby mode, stopping the propellers.
 
-
-## Liability Disclaimer
+## Disclaimer of Liability
 Please be aware that I, Tim Hanewich, the creator of this drone quadcopter code, do not assume any responsibility or liability for any consequences, including but not limited to injuries, damages, breaches of law, or any adverse events that may occur while deploying, testing, or using this code in any other way.
 
 By accessing, modifying, or utilizing this code, you acknowledge and agree that you do so at your own risk. It is essential to exercise caution, adhere to safety regulations, and ensure compliance with all relevant laws and guidelines when working with drones or any related technology.
 
-While this project is dedicated to promoting benevolent uses of drone technology, it is crucial to understand that unforeseen circumstances and unintended outcomes can arise. Users and developers are encouraged to prioritize safety, conduct thorough testing, and act responsibly at all times. Your safety and the safety of others should always be your utmost concern.
+Furthermore, please note that the code and designs provided are intended solely for educational and informational purposes. While efforts have been made to ensure accuracy and safety, there are inherent risks associated with building and operating unmanned aerial vehicles. While this project is dedicated to promoting benevolent uses of drone technology, it is crucial to understand that unforeseen circumstances and unintended outcomes can arise.
+
+Users and developers are encouraged to prioritize safety, conduct thorough testing, and act responsibly at all times. Your safety and the safety of others should always be your utmost concern. I explicitly disclaim any responsibility for any injuries, damages, or bodily harm that may occur as a result of using or replicating these materials."
+
+As always, consulting with legal counsel is advisable to ensure the disclaimer aligns with your specific situation and legal requirements.

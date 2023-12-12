@@ -66,6 +66,6 @@ By accessing, modifying, or utilizing this code, you acknowledge and agree that 
 
 Furthermore, please note that the code and designs provided are intended solely for educational and informational purposes. While efforts have been made to ensure accuracy and safety, there are inherent risks associated with building and operating unmanned aerial vehicles. While this project is dedicated to promoting benevolent uses of drone technology, it is crucial to understand that unforeseen circumstances and unintended outcomes can arise.
 
-Users and developers are encouraged to prioritize safety, conduct thorough testing, and act responsibly at all times. Your safety and the safety of others should always be your utmost concern. I explicitly disclaim any responsibility for any injuries, damages, or bodily harm that may occur as a result of using or replicating these materials."
+Users and developers are encouraged to prioritize safety, conduct thorough testing, and act responsibly at all times. Your safety and the safety of others should always be your utmost concern. I explicitly disclaim any responsibility for any injuries, damages, or bodily harm that may occur as a result of using or replicating these materials.
 
 As always, consulting with legal counsel is advisable to ensure the disclaimer aligns with your specific situation and legal requirements.

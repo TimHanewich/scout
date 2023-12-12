@@ -3,11 +3,13 @@
 -----
 
 ## Scout Demo Videos
-Click on the image below to watch a brief video about *Scout's* development:
+Click on the image below to watch a brief video about *Scout's* development:  
 [![IMAGE ALT TEXT HERE](https://i.imgur.com/iNZ74vi.png)](https://www.youtube.com/watch?v=mbrcnaByMyo)
 
-- Scout's First Flight: [https://youtu.be/Wh5G9zdJbzk](https://youtu.be/Wh5G9zdJbzk)
-- Scout Demo Flight 1: [https://youtu.be/LNRYPo5-4VI](https://youtu.be/LNRYPo5-4VI)
+Further videos:
+- [Scout's First Flight](https://youtu.be/Wh5G9zdJbzk)
+- [Scout Demo Flight 1](https://youtu.be/LNRYPo5-4VI)
+- [Recording of my presentation to the Melbourne, Australia MicroPython Meetup on how I developed the Scout Flight Controller](https://youtu.be/5BmaKVHan_c)
 
 ## Repository Contents
 - The complete source code for the *Scout Flight Controller* can be found in [the `src` folder](./src/).

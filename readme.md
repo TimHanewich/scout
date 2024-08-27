@@ -59,6 +59,8 @@ If you're interested in learning how the Scout Flight Controller was made and pe
 11. [Potential Future Improvements](https://medium.com/@timhanewich/how-i-developed-the-scout-flight-controller-part-10-future-improvements-ae1957f81f76)
 12. [Bonus Code](https://timhanewich.medium.com/how-i-developed-the-scout-flight-controller-part-11-bonus-code-b6bd4f18de64)
 
+Thanks to [stienman](https://github.com/stienman), all 12 chapters are now available as a single ebook PDF download! Download the ebook [here](https://github.com/TimHanewich/scout/releases/download/1/The.Scout.Flight.Controller.pdf).
+
 ## Disclaimer of Liability
 Please be aware that I, Tim Hanewich, the creator of this drone quadcopter code, do not assume any responsibility or liability for any consequences, including but not limited to injuries, damages, breaches of law, or any adverse events that may occur while deploying, testing, or using this code in any other way.
 

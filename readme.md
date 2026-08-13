@@ -1,6 +1,15 @@
 ![logo](https://i.imgur.com/X2tfDfO.jpg)
+
 *Scout* is an open-source custom quadcopter flight controller firmware that I developed from absolute scratch. The *Scout Flight Controller* is written in MicroPython and runs on a $4 Raspberry Pi Pico.
 -----
+
+> ## Scout's Successor: Centauri
+>
+> **Scout was my first custom flight controller, Centauri is the next generation!**
+>
+> If this project interests you, check out [**Centauri**](https://github.com/TimHanewich/centauri): a complete, open-source quadcopter ecosystem featuring a more efficient MicroPython flight controller, custom 3D-printed airframe, bidirectional radio protocol, PC-based transmitter, battery monitoring, over-the-air PID updates, and flight telemetry analysis.
+>
+> I documented its entire development in [**Full-Stack Flight**](https://medium.com/@timhanewich/full-stack-flight-building-a-quadcopter-ecosystem-from-scratch-18d43386bb6d), a detailed educational series covering the design, electronics, software, mistakes, crashes, and lessons learned.
 
 ## Scout Demo Videos
 Click on the image below to watch a brief video about *Scout's* development:  
